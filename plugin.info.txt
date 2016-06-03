@@ -1,7 +1,7 @@
 base   rss
 author Algorys
 email  ttamalfor@gmail.com
-date   2016-01-20
+date   2016-01-22
 name   rss
 desc   display rss feed in your wiki
 
