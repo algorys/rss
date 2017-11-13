@@ -87,13 +87,13 @@ class syntax_plugin_rss extends DokuWiki_Syntax_Plugin {
             foreach($fluxrss->channel->item as $item) {
                 $renderer->doc .= '<li>';
                 $renderer->doc .= '<a href="'.(string)$item->link.'">'.(string)$item->title.'</a>';
-                $renderer->doc .= '<i> &#9998 publié le '.(string)date('d/m/Y à G\hi',strtotime($item->pubDate)).'</i>';
+                $renderer->doc .= '<i> &#9998 '.$this->getLang('rss.publish').' '.(string)date('G\hi, d/m/Y', strtotime($item->pubDate)).'</i>';
                 $renderer->doc .= '</li>';
                 if(++$i>=$nb_to_display)
                     break;
             }
         }else {
-            $renderer->doc .= '<p>Le Flux est vide ! </p>';
+            $renderer->doc .= '<p>'.$this->getLang('rss.empty').' </p>';
         }
     }
 
