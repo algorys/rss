@@ -1,5 +1,5 @@
 <?php
-// German language file
+// German informal language file
 // @author F. Mueller-Donath <j.felix@mueller-donath.de>
 
 // settings must be present and set appropriately for the language
