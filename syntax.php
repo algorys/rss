@@ -82,7 +82,7 @@ class syntax_plugin_rss extends DokuWiki_Syntax_Plugin {
             $renderer->doc .= '<h3>'.(string)$fluxrss->channel->title.'</h3>';
             $renderer->doc .= '<p>'.(string)$fluxrss->channel->description.'</p>';
             $i = 0;
-            $nb_to_display = 5;
+            $nb_to_display = $this->getConf('rsslines');
             $renderer->doc .= '<ul>';
             foreach($fluxrss->channel->item as $item) {
                 $renderer->doc .= '<li>';
